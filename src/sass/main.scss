@@ -4,3 +4,94 @@
 @import './base/reset.local';
 @import './base/typography';
 @import './base/spacings';
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: minmax(20rem, 1fr);
+  justify-items: center;
+  align-content: center;
+  perspective: 100rem;
+}
+
+.movie-picker {
+  display: flex;
+  align-items: center;
+  .label {
+    color: $color-white;
+    margin-right: 2rem;
+  }
+  .picker {
+    padding: 0.6rem 1rem;
+    border-radius: 3rem;
+    appearance: none;
+  }
+}
+
+.seat {
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: $color-mako;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.showcase {
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+}
+
+.legend {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-auto-flow: column;
+  align-items: center;
+  color: $color-boulder;
+  font-size: $fs-text;
+}
+.occupied {
+  background-color: $color-white;
+}
+.selected {
+  background-color: $color-malibu;
+}
+.screen {
+  height: 10rem;
+  width: 20rem;
+  background-color: $color-white;
+  transform: rotateX(-45deg);
+  box-shadow: 0 2px 10px $color-white;
+  margin-bottom: 1.5rem;
+}
+.seat-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: row;
+}
+.row {
+  display: grid;
+  grid-gap: 2rem;
+  grid-auto-flow: column;
+}
+
+.section {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 0.5rem;
+}
+.selection {
+  color: $color-white;
+  font-size: $fs-text;
+}
